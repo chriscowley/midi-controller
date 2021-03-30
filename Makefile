@@ -1,7 +1,7 @@
 serial:
-	pyserial-miniterm /dev/ttyUSB0 9600
+	pyserial-miniterm /dev/ttyACM0 115200
 compile:
-	arduino-cli compile --fqbn arduino:avr:nano .
+	arduino-cli compile --fqbn arduino:avr:leonardo .
 
 upload:compile
-	arduino-cli upload -p /dev/ttyUSB0 --fqbn arduino:avr:nano .
+	arduino-cli upload -p /dev/ttyACM0 --fqbn arduino:avr:leonardo .
